@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 
 import perimeter
-from util import manhattanDistance, removeDupsFromPointList
+from util import manhattanDistance
 
 def toIntersectingLines(mesh, height):
     relevantTriangles = list(filter(lambda tri: isAboveAndBelow(tri, height), mesh))
@@ -118,7 +118,7 @@ def scaleAndShiftMesh(mesh, scale, shift):
             for i in range(3):
                 newpt[i] = (pt[i] + shift[i]) * scale[i]
             newTri.append(tuple(newpt))
-        if len(removeDupsFromPointList(newTri)) == 3:
+        if len(newTri) == 3:
             yield newTri
         else:
             pass

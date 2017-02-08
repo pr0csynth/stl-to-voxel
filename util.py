@@ -19,11 +19,6 @@ def printBigArray(big, yes='1', no='0'):
                 print(no, end=" ")
         print()
 
-
-def removeDupsFromPointList(ptList):
-    newList = ptList[:]
-    return tuple(set(newList))
-
 def arrayToWhiteGreyscalePixel(array, pixels):
     for i in range(array.shape[0]):
         for j in range(array.shape[1]):
